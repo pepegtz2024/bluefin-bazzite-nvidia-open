@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ouex pipefail
+#set -ouex pipefail
 
 ### Install packages
 
@@ -10,8 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf copr -y enable g3tchoo/prismlauncher
-dnf install -y lutris steam waydroid prismlauncher
+dnf5 copr -y enable g3tchoo/prismlauncher
+dnf5 install -y lutris steam waydroid prismlauncher
 
 # Use a COPR Example:
 #
@@ -19,7 +19,7 @@ dnf install -y lutris steam waydroid prismlauncher
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-dnf -y copr disable g3tchoo/prismlauncher
+dnf5 -y copr disable g3tchoo/prismlauncher
 
 #### Example for enabling a System Unit File
 
