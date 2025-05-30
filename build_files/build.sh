@@ -12,7 +12,13 @@
 # this installs a package from fedora repos
 dnf5 copr -y enable g3tchoo/prismlauncher
 dnf5 install -y lutris steam waydroid prismlauncher
-./mcpelauncher.sh
+
+#mcpelauncher build
+sudo dnf5 -y install libuv-devel libzip-devel protobuf-devel protobuf-compiler qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtdeclarative-devel qt5-qtsvg-devel qt5-qtquickcontrols qt5-qtquickcontrols2
+git clone --recursive https://github.com/minecraft-linux/mcpelauncher-ui-manifest.git mcpelauncher-ui
+cd mcpelauncher-ui && mkdir -p build && cd build
+cmake ..
+make -j$(getconf _NPROCESSORS_ONLN)
 
 # Use a COPR Example:
 #
