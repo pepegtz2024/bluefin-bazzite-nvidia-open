@@ -12,6 +12,7 @@
 # this installs a package from fedora repos
 dnf5 copr -y enable g3tchoo/prismlauncher
 dnf5 install -y lutris steam waydroid prismlauncher
+./mcpelauncher.sh
 
 # Use a COPR Example:
 #
