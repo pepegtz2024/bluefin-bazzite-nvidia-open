@@ -13,7 +13,7 @@
 dnf5 copr -y enable g3tchoo/prismlauncher
 dnf5 install -y lutris steam waydroid prismlauncher
 
-/ctx/mcpelauncher.sh
+./mcpelauncher.sh
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
