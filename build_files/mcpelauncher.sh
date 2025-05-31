@@ -1,5 +1,5 @@
 #!/bin/bash
-cat | sudo tee /etc/yum.repos.d/minecraft-linux-pkg.repo << 'EOF'
+cat | tee /etc/yum.repos.d/minecraft-linux-pkg.repo << 'EOF'
 [minecraft-linux-pkg]
 name=minecraft-linux-pkg
 baseurl=https://minecraft-linux.github.io/pkg/fedora-42

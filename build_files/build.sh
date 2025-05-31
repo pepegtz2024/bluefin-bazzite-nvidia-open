@@ -11,7 +11,8 @@
 
 # this installs a package from fedora repos
 dnf5 copr -y enable g3tchoo/prismlauncher
-dnf5 install -y lutris steam waydroid prismlauncher
+dnf5 copr -y enable atim/heroic-games-launcher
+dnf5 install -y lutris steam waydroid prismlauncher heroic-games-launcher-bin
 
 # Use a COPR Example:
 #
@@ -20,6 +21,7 @@ dnf5 install -y lutris steam waydroid prismlauncher
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 dnf5 copr -y disable g3tchoo/prismlauncher
+dnf5 copr -y disable atim/heroic-games-launcher
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket
