@@ -1,7 +1,15 @@
 #!/bin/bash
-#AAAAAAAAAAAA
-sudo dnf5 -y install libuv-devel libzip-devel protobuf-devel protobuf-compiler qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtdeclarative-devel qt5-qtsvg-devel qt5-qtquickcontrols qt5-qtquickcontrols2
-git clone --recursive https://github.com/minecraft-linux/mcpelauncher-ui-manifest.git mcpelauncher-ui
-cd mcpelauncher-ui && mkdir -p build && cd build
-cmake ..
-make -j$(getconf _NPROCESSORS_ONLN)
+cat | sudo tee /etc/yum.repos.d/minecraft-linux-pkg.repo << 'EOF'
+[minecraft-linux-pkg]
+name=minecraft-linux-pkg
+baseurl=https://minecraft-linux.github.io/pkg/fedora-42
+enabled=1
+countme=1
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+skip_if_unavailable=False
+gpgkey=https://minecraft-linux.github.io/pkg/deb/pubkey.gpg
+EOF
+
+sudo dnf install mcpelauncher-manifest mcpelauncher-ui-manifest msa-manifest
