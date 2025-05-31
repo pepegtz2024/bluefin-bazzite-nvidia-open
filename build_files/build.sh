@@ -20,7 +20,7 @@ dnf5 install -y lutris steam waydroid prismlauncher heroic-games-launcher-bin
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-dnf5 -y copr disable g3tchoo/prismlauncher
+dnf5 copr -y disable g3tchoo/prismlauncher
 dnf5 copr -y disable atim/heroic-games-launcher
 
 #### Example for enabling a System Unit File
