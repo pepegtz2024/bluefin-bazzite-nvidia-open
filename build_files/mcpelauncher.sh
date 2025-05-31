@@ -12,4 +12,4 @@ skip_if_unavailable=False
 gpgkey=https://minecraft-linux.github.io/pkg/deb/pubkey.gpg
 EOF
 
-dnf5 install mcpelauncher-manifest mcpelauncher-ui-manifest msa-manifest
+dnf5 -y install mcpelauncher-manifest mcpelauncher-ui-manifest msa-manifest
