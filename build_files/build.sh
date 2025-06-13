@@ -12,7 +12,7 @@
 # this installs a package from fedora repos
 dnf5 copr -y enable g3tchoo/prismlauncher
 dnf5 copr -y enable atim/heroic-games-launcher
-dnf5 install -y lutris steam waydroid prismlauncher heroic-games-launcher-bin
+dnf5 install -y lutris steam waydroid prismlauncher heroic-games-launcher-bin protontricks
 
 # Use a COPR Example:
 #
